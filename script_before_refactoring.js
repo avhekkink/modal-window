@@ -44,3 +44,15 @@ overlay.addEventListener('click', function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 });
+
+// Add event for key press of 'esc'
+document.addEventListener('keydown', function (e) {
+  console.log('A key was pressed');
+  console.log(e);
+  console.log(e.key);
+  if (e.key === 'Escape') {
+    if (!modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  }
+});
